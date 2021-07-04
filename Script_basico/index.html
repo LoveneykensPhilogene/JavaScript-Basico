@@ -1,14 +1,57 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
 
 <head>
+
   <meta charset="UTF-8">
+
   <title>Aula de javaScript</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+
 </head>
 
-<body>
-  <h1>Teste!</h1>
-  <script src="script.js" type="text/javaScript"></script>
+<body onload="load()">
+
+  <h1>Minha Pagina!</h1>
+
+  <script src="script.js " type="text/javaScript"></script>
+  <script src="function.js" type="text/javaScript"></script>
+
+  <div>
+    <h2 id="clicou">Pode clicar.</h2>
+    <p id="textoMudado">Esta frase vai ser mudada,passar o mouse emcima do button "Mude a frase"</p>
+    <p id="voltar">Clicar no botão "Voltar" para mudar!</p>
+    <p id="trocarVoltar" onmouseover="trocarElement(this)" onmouseout="voltarElement(this)">Passar o mouse!</p>
+
+    <button type="button" onclick=" buton()" value="clicar">Clique aqui</button>
+    <button type="button" onclick="redirecionar()" value="page">Outra pagina</button>
+    <button type="button" id="nomeButton" onclick="trocarNomeButton()" value="page">Trocar nome Btn</button>
+
+  </div>
+
+  <hr />
+
+  <div>
+    <button type="button" onmouseover='passarMouse()' value="clicar">Passe o mouse aqui</button>
+    <button type="button" id="textoMudado" onmousemove="mudarTextoComMouse()">Mude a frase</button>
+    <button type="button" id="voltar" onmousedown="voltar()" value="page">voltar</button>
+
+  </div>
+  <hr />
+  <section>
+
+    Valor : <output id="change"></output>
+    <select onchange="functionOnChange(this)">
+      <option>Selecione....</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </section>
+
 </body>
 
 </html>
